@@ -1,0 +1,33 @@
+.post-box{
+    display: grid;
+    grid-template-columns: 10% 88%;
+}
+.post-box img{
+    border-radius: 50%;
+}
+.post-box input{
+    position: relative;
+    left:10px;
+    border-radius: 130px;
+    border: 0.1px solid rgb(180, 176, 176);
+}
+
+.post-box input::placeholder{
+    font-size:18px;
+    font-weight: bolder;
+}
+
+.post-box .post-actions{
+    position: relative;
+    top:10px;
+    display:grid;
+    grid-template-columns: 35px 40px;
+}
+
+.post-box .post-actions fa-icon{
+    font-size: 18px;
+}
+
+.post-box .post-actions p{
+    font-size: 15px;
+}

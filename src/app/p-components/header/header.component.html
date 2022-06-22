@@ -1,0 +1,86 @@
+<div class="navig">
+  <nav class="navbar navbar-expand py-0">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="'.'">
+        <fa-icon class="brand-icon" [icon]="faLinkedIn"></fa-icon>
+      </a>
+
+      <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        &#9776;
+      </button>
+
+      <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <!-- Step 4: Close the menu when a link is clicked. -->
+            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">
+              <fa-icon class="search-icon" [icon]="faSearch"></fa-icon> <input type="text" class="search-box"
+                placeholder="Search">
+            </a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav action-icons">
+          <li class="nav-item" [ngClass]="{active:action === 'home'}">
+            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">
+              <div class="action-box">
+                <div class="action-icon">
+                  <fa-icon [icon]="faHome"></fa-icon>
+                </div>
+                <p class="text">Home</p>
+              </div>
+              
+            </a>
+          </li>
+          <li class="nav-item" [ngClass]="{active:action === 'mynetwork'}">
+            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">
+              <div class="action-box">
+                <div class="action-icon">
+                  <fa-icon [icon]="faNetwork"></fa-icon>
+                </div>
+                <p class="text">My Network</p>
+              </div>
+             
+            </a>
+          </li>
+
+          <li class="nav-item" [ngClass]="{active:action === 'jobs'}">
+            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">
+              <div class="action-box">
+                <div class="action-icon">
+                  <fa-icon [icon]="faJob"></fa-icon>
+                </div>
+                <p class="text">Jobs</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item" [ngClass]="{active:action === 'messaging'}">
+            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">             
+              <div class="action-box">
+                <div class="action-icon">
+                  <fa-icon [icon]="faMessaging"></fa-icon>
+                </div>
+                <p class="text">Messaging</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item" [ngClass]="{active:action === 'notifications'}">
+            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">
+              <div class="action-box">
+                <div class="action-icon">
+                  <fa-icon [icon]="faBell"></fa-icon>
+                </div>
+                <p class="text">Notifications</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
