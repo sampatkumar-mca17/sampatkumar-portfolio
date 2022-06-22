@@ -11,6 +11,11 @@ const routes: Routes = [
       {
         path:'view',
         component:ViewComponent
+      },
+      {
+        path:'',
+        redirectTo:'view',
+        pathMatch:'full'
       }
     ]
   },
